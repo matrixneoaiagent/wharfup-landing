@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WharfUp — Seamless maritime logistics</title>
+  <meta name="description" content="WharfUp gives freight teams one clear view of cargo, documents and support — from origin port to final delivery.">
+  <meta name="theme-color" content="#0B0E13">
+  <link rel="canonical" href="https://wharfup.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WharfUp — Seamless maritime logistics">
+  <meta property="og:description" content="One clear view of cargo, documents and support — from origin port to final delivery.">
+  <meta property="og:url" content="https://wharfup.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WharfUp — Seamless maritime logistics">
+  <meta name="twitter:description" content="One clear view of cargo, documents and support — from origin port to final delivery.">
+  <style>
+    :root{--ink:#0B0E13;--panel:#11161E;--panel2:#151C26;--gold:#E0B968;--teal:#39D8C0;--paper:#E9EEF2;--muted:#8A97A6;--line:#26303C;--max:1180px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}
+    .skip{position:absolute;left:16px;top:-80px;background:var(--gold);color:var(--ink);padding:12px 16px;font-weight:800;z-index:60}
+    .skip:focus{top:16px}
+    .wrap{width:min(100% - 48px,var(--max));margin-inline:auto}
+    .nav{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:36px;position:sticky;top:0;background:rgba(11,14,19,.9);backdrop-filter:blur(12px);z-index:30}
+    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:-.05em;font-size:23px}
+    .brand-mark{width:26px;height:26px;border:1px solid var(--gold);position:relative;display:inline-block}
+    .brand-mark:before{content:"";position:absolute;left:5px;right:5px;top:9px;height:1px;background:var(--gold)}
+    .brand-mark:after{content:"";position:absolute;left:9px;top:5px;bottom:5px;width:1px;background:var(--teal)}
+    .nav-links{display:flex;gap:26px;margin-left:auto;font-size:12px;font-weight:700}
+    .nav-links a{text-decoration:none;color:#B7C2CD;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 22px;border:1px solid var(--line);background:var(--panel2);color:var(--paper);font:inherit;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+    .btn:hover{transform:translateY(-1px);border-color:var(--gold);background:#1B2430}
+    .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+    .btn-gold:hover{background:#F0CB7E;border-color:#F0CB7E}
+    .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center;padding:78px 0 88px;min-height:620px}
+    .kicker{display:flex;align-items:center;gap:12px;color:var(--teal);font-size:11px;font-weight:800;margin:0 0 26px}
+    .kicker:before{content:"";width:24px;height:1px;background:var(--teal)}
+    h1{font-size:clamp(48px,6.3vw,82px);line-height:.98;letter-spacing:-.065em;margin:0 0 24px;font-weight:850}
+    h1 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:var(--gold);font-style:italic;letter-spacing:-.03em}
+    .sub{max-width:520px;color:#B7C2CD;font-size:19px;line-height:1.62;margin:0 0 32px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+    .hero-note{color:#6F7D8C;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .hero-art{position:relative;min-height:470px}
+    .hero-art svg{width:100%;height:auto;display:block}
+    .rails{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);background:#0E131A}
+    .rail{padding:22px 26px;border-right:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+    .rail:last-child{border-right:0}
+    .rail b{color:var(--gold);font-size:11px;letter-spacing:.12em}
+    .rail span{color:#B7C2CD;font-size:13px;font-weight:650}
+    .section{padding:100px 0}
+    .head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:44px}
+    .label{color:var(--teal);font-size:11px;font-weight:800;margin:0 0 14px}
+    h2{font-size:clamp(34px,4.2vw,54px);line-height:1.03;letter-spacing:-.055em;margin:0;font-weight:820}
+    h2 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:var(--gold);font-style:italic}
+    .head p{max-width:430px;color:var(--muted);font-size:15px;margin:0}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .feature{padding:32px 28px 38px;border-right:1px solid var(--line);min-height:260px;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,.015),transparent)}
+    .feature:last-child{border-right:0}
+    .feature .n{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.14em;margin-bottom:auto}
+    .feature h3{font-size:21px;line-height:1.15;letter-spacing:-.025em;margin:42px 0 10px;font-weight:800}
+    .feature p{color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+    .process{background:#0E131A;border-block:1px solid var(--line)}
+    .process-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:8%;padding:92px 0}
+    .process-copy p{color:var(--muted);font-size:15px;max-width:350px}
+    .steps{list-style:none;margin:0;padding:0}
+    .steps li{display:grid;grid-template-columns:54px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+    .steps li:last-child{border-bottom:1px solid var(--line)}
+    .steps .n{color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.12em;padding-top:4px}
+    .steps h3{margin:0 0 5px;font-size:18px;letter-spacing:-.015em}
+    .steps p{margin:0;color:var(--muted);font-size:14px}
+    .cta{border:1px solid var(--line);background:radial-gradient(circle at 80% 20%,rgba(57,216,192,.12),transparent 40%),radial-gradient(circle at 10% 90%,rgba(224,185,104,.12),transparent 40%),var(--panel);padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    .cta h2{font-size:clamp(30px,3.8vw,46px)}
+    .cta p{color:var(--muted);font-size:15px;max-width:460px}
+    .cta-actions{display:flex;justify-content:flex-end}
+    .access{display:none;margin-top:18px;border:1px solid var(--line);background:#0B0F15;padding:18px;max-width:420px}
+    .access.open{display:block}
+    .access label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+    .access input{width:100%;border:1px solid var(--line);background:#11161E;color:var(--paper);padding:12px 13px;font:inherit;font-size:14px;outline:none}
+    .access input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(57,216,192,.16)}
+    .access .btn{margin-top:12px;width:100%}
+    .access-status{font-size:12px;color:var(--teal);min-height:18px;margin:10px 0 0}
+    footer{border-top:1px solid var(--line);padding:44px 0 30px;background:#090C10;color:#6F7D8C;font-size:12px}
+    .foot{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+    .foot-brand{font-size:21px;font-weight:900;letter-spacing:-.05em;color:var(--paper)}
+    .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+    .foot-links a{text-decoration:none;color:#8A97A6}
+    .foot-links a:hover{color:var(--gold)}
+    .foot-bottom{padding-top:22px;margin-top:26px;border-top:1px solid #1B2430;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:11px}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:34px;padding:56px 0 64px;min-height:0}
+      .hero-art{max-width:540px;margin-inline:auto;min-height:0}
+      .features{grid-template-columns:1fr}
+      .feature{border-right:0;border-bottom:1px solid var(--line);min-height:0}
+      .feature:last-child{border-bottom:0}
+      .process-grid,.cta{grid-template-columns:1fr;gap:34px;padding:60px 0}
+      .cta{padding:38px 28px}
+      .cta-actions{justify-content:flex-start}
+      .nav-links{display:none}
+      .nav .btn{margin-left:auto}
+      .head{flex-direction:column;align-items:flex-start;gap:16px}
+      .section{padding:70px 0}
+      .rails{grid-template-columns:1fr}
+      .rail{border-right:0;border-bottom:1px solid var(--line)}
+      .rail:last-child{border-bottom:0}
+    }
+    @media (max-width:560px){
+      .wrap{width:min(100% - 32px,var(--max))}
+      .nav{height:66px}
+      .hero-actions .btn{width:100%}
+      .hero-actions{width:100%}
+      .hero-note{width:100%}
+      .foot{flex-direction:column}
+      .foot-bottom{flex-direction:column}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav wrap">
+    <a class="brand" href="#top" aria-label="WharfUp home"><span class="brand-mark" aria-hidden="true"></span>WharfUp</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#features">Platform</a>
+      <a href="#process">How it works</a>
+      <a href="#access">Pilot access</a>
+    </nav>
+    <a class="btn btn-gold" href="#access">Get Started</a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div>
+        <p class="kicker mono">Private pilot · maritime operations</p>
+        <h1 id="hero-title">Welcome to WharfUp</h1>
+        <p class="sub">Your gateway to seamless maritime logistics.</p>
+        <p class="sub" style="font-size:15px;max-width:470px;margin-bottom:28px">One clear view of cargo, documents and support — from origin port to final delivery. Built for freight teams that need fewer blind spots and faster decisions.</p>
+        <div class="hero-actions">
+          <button class="btn btn-gold" type="button" data-open-access>Get Started <span aria-hidden="true">→</span></button>
+          <a class="btn" href="#features">See the platform</a>
+          <span class="hero-note mono">No credit card · pilot onboarding</span>
+        </div>
+        <div class="access" id="hero-access" aria-live="polite">
+          <label for="hero-email">Work email</label>
+          <input id="hero-email" type="email" placeholder="you@company.com" autocomplete="email">
+          <button class="btn btn-gold" type="button" data-submit-access>Request pilot access</button>
+          <p class="access-status" data-access-status></p>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 560 500" role="presentation" focusable="false">
+          <rect x="16" y="16" width="528" height="468" fill="#11161E" stroke="#26303C"/>
+          <g stroke="#26303C" stroke-width="1">
+            <path d="M16 140h528M16 264h528M16 388h528"/>
+            <path d="M150 16v468M282 16v468M414 16v468"/>
+          </g>
+          <path d="M282 62v250" stroke="#E0B968" stroke-width="2"/>
+          <path d="M250 82h64M238 106h88" stroke="#E0B968" stroke-width="2"/>
+          <rect x="236" y="118" width="92" height="26" fill="#E0B968"/>
+          <rect x="214" y="158" width="136" height="22" fill="#39D8C0"/>
+          <rect x="196" y="194" width="168" height="22" fill="#E0B968"/>
+          <rect x="178" y="230" width="204" height="22" fill="#39D8C0"/>
+          <path d="M120 312h320l-34 64H154l-34-64Z" fill="#E9EEF2"/>
+          <path d="M154 376h252" stroke="#0B0E13" stroke-width="8"/>
+          <path d="M90 420c40-18 80-18 120 0s80 18 120 0 80-18 120 0" fill="none" stroke="#39D8C0" stroke-width="2"/>
+          <path d="M90 444c40-18 80-18 120 0s80 18 120 0 80-18 120 0" fill="none" stroke="#26303C" stroke-width="2"/>
+          <text x="48" y="54" fill="#8A97A6" font-family="ui-monospace,Menlo,monospace" font-size="11" letter-spacing="1.4">WHARFUP / CONTROL</text>
+          <text x="48" y="78" fill="#E0B968" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1.2">PORT 01 — ORIGIN</text>
+          <text x="392" y="460" fill="#39D8C0" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1.2">ETA — ON TIME</text>
+        </svg>
+      </div>
+    </section>
+
+    <div class="rails" aria-label="What WharfUp covers">
+      <div class="rail"><b>01</b><span>Cargo visibility</span></div>
+      <div class="rail"><b>02</b><span>Document control</span></div>
+      <div class="rail"><b>03</b><span>Human support</span></div>
+    </div>
+
+    <section class="section wrap" id="features" aria-labelledby="features-title">
+      <div class="head">
+        <div>
+          <p class="label mono">One operating view</p>
+          <h2 id="features-title">Less chasing.<br><em>More certainty.</em></h2>
+        </div>
+        <p>Freight moves across ports, carriers and paperwork. WharfUp keeps the important facts together so your team can act on them.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <span class="n">01</span>
+          <h3>Real-time cargo tracking</h3>
+          <p>Follow every shipment across carriers and ports, with milestones and exceptions surfaced before they become surprises.</p>
+        </article>
+        <article class="feature">
+          <span class="n">02</span>
+          <h3>Automated documentation</h3>
+          <p>Generate, collect and check the documents a shipment needs, with a clear record of what is missing and who owns it.</p>
+        </article>
+        <article class="feature">
+          <span class="n">03</span>
+          <h3>24/7 customer support</h3>
+          <p>Reach a team that knows the shipment, not a generic queue. Escalate exceptions and keep the thread attached to the record.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="process-grid wrap">
+        <div class="process-copy">
+          <p class="label mono">A calmer workflow</p>
+          <h2 id="process-title">From booking<br><em>to proof.</em></h2>
+          <p>WharfUp is designed around the handoffs where maritime operations lose time: the quote, the documents, the exception, the delivery proof.</p>
+        </div>
+        <ol class="steps">
+          <li><span class="n">01</span><div><h3>Connect the shipment</h3><p>Bring the booking, carrier references and parties into one shared record.</p></div></li>
+          <li><span class="n">02</span><div><h3>Track the exceptions</h3><p>See milestone changes and document gaps as they happen, with an owner for each next step.</p></div></li>
+          <li><span class="n">03</span><div><h3>Close with evidence</h3><p>Keep delivery proof, documents and the communication trail attached to the shipment.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access" aria-labelledby="access-title">
+      <div class="cta">
+        <div>
+          <p class="label mono">Private pilot</p>
+          <h2 id="access-title">Ready for a<br><em>clearer crossing?</em></h2>
+          <p>WharfUp is onboarding a small group of freight teams. Tell us where you ship and we will show you the operating view.</p>
+        </div>
+        <div class="cta-actions">
+          <div style="width:100%;max-width:420px">
+            <button class="btn btn-gold" type="button" data-open-access style="width:100%">Get Started <span aria-hidden="true">→</span></button>
+            <div class="access" id="cta-access" aria-live="polite">
+              <label for="cta-email">Work email</label>
+              <input id="cta-email" type="email" placeholder="you@company.com" autocomplete="email">
+              <button class="btn btn-gold" type="button" data-submit-access>Request pilot access</button>
+              <p class="access-status" data-access-status></p>
+            </div>
+            <p style="font-size:11px;color:#6F7D8C;margin:12px 0 0">No credit card. Pilot access is subject to fit and availability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <div class="foot-brand">WharfUp</div>
+          <div style="margin-top:8px;max-width:320px">Seamless maritime logistics for freight teams.</div>
+        </div>
+        <nav class="foot-links" aria-label="Footer navigation">
+          <a href="#features">Platform</a>
+          <a href="#process">How it works</a>
+          <a href="#access">Pilot access</a>
+          <a href="#top">Back to top</a>
+        </nav>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="year">2026</span> WharfUp. All rights reserved.</span>
+        <span>Private pilot preview. Service availability and pricing are subject to change.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var year = document.getElementById('year');
+      if (year) year.textContent = String(new Date().getFullYear());
+      var panels = [document.getElementById('hero-access'), document.getElementById('cta-access')].filter(Boolean);
+      document.querySelectorAll('[data-open-access]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = document.getElementById('access');
+          if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+          panels.forEach(function (p) { p.classList.add('open'); });
+          var input = document.querySelector('#cta-email') || document.querySelector('#hero-email');
+          if (input) setTimeout(function () { input.focus(); }, 350);
+        });
+      });
+      document.querySelectorAll('[data-submit-access]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var panel = btn.closest('.access');
+          var input = panel ? panel.querySelector('input[type="email"]') : null;
+          var status = panel ? panel.querySelector('[data-access-status]') : null;
+          if (!input || !status) return;
+          var value = String(input.value || '').trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            status.textContent = 'Please enter a valid work email.';
+            status.style.color = '#E0B968';
+            input.focus();
+            return;
+          }
+          status.textContent = 'Thanks — your pilot request is noted. This preview does not send data to a server.';
+          status.style.color = '#39D8C0';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
